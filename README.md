@@ -30,20 +30,27 @@ A secure authentication service that implements **JWT-based authentication using
 
 ## Project Structure
 
-
-.
+```
+jwt-auth-service/
 ├── Dockerfile
 ├── docker-compose.yml
 ├── .env.example
 ├── .gitignore
+├── README.md
 ├── generate-keys.sh
 ├── test-auth-flow.sh
-├── README.md
 ├── keys/
-└── src/
-
-
----
+│   ├── private.pem
+│   └── public.pem
+├── src/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── utils/
+│   └── server.js
+└── db-data/
+```
 
 ## Environment Variables
 
@@ -122,3 +129,4 @@ This script tests:
 - **Access Token:** 15 minutes
 - **Refresh Token:** 7 days
 - **Rate limiting:** 5 login attempts per minute
+
